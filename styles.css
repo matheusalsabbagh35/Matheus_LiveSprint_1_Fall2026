@@ -1,5 +1,100 @@
 /* LiveSprint 1 Styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+
+:root {
+  --background-color: rgb(253, 248, 248);
+  --button-border-color: rgb(243, 163, 14);
+
+  --font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --radius: 8px;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Body */
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    text-align: center;
+    background-color: var(--background-color);
+  }
+
+  /* Header */
+  header {
+    padding: 20px;
+  }
+
+  /* Main content */
+  main {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  /* Animal layout */
+  .animal-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 400px;
+    padding: 20px;
+  }
+
+  /* Animal sections */
+  .animal {
+    width: 30%;
+    text-align: center;
+  }
+
+  /* Animal images */
+  .animal img {
+    width: 150px;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  /* Result containers */
+  .animal [id$="-result"] {
+    margin-bottom: 15px;
+    border: 1px solid var(--button-border-color);
+    border-radius: 4px;
+  }
+
+  /* Buttons */
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--background-color);
+    border: 1px solid var(--button-border-color);
+    border-radius: 4px;
+  }
+
+  button:hover {
+    background-color: var(--button-hover-background-color);
+  }
+
+  /* Hide Result buttons */
+  .animal [id$="-result"] button {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(58, 58, 195);
+    color: white;
+    border: none;
+  }
+
+  /* Hide images initially */
+  [hidden] {
+    display: none !important;
+  }
 }

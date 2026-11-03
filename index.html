@@ -3,9 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LiveSprint 1</title>
+    <title>What's That Animal?</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h2>Welcome to the Interactive Reveal What's that Animal UI</h2>
+    </header>
+
+    <main>
+      <h2>Click on the buttons below to reveal the animal images</h2>
+
+      <section class="animal-container">
+        <!-- The Cat -->
+        <div class="animal">
+          <div id="cat-result" hidden>
+            <img src="tabby-cat.jpg" alt="Cat" />
+            <button id="cat-hide">Hide Result</button>
+          </div>
+
+          <button id="cat-btn">Reveal a CAT</button>
+        </div>
+
+        <!-- The Dog -->
+        <div class="animal">
+          <div id="dog-result" hidden>
+            <img src="dog.jpg" alt="Dog" />
+            <button id="dog-hide">Hide Result</button>
+          </div>
+
+          <button id="dog-btn">Reveal a DOG</button>
+        </div>
+
+        <!-- The Cow -->
+        <div class="animal">
+          <div id="cow-result" hidden>
+            <img src="cow.jpg" alt="Cow" />
+            <button id="cow-hide">Hide Result</button>
+          </div>
+
+          <button id="cow-btn">Reveal a COW</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
 </html>
